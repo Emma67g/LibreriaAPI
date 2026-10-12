@@ -6,10 +6,10 @@ Es una API basada en una arquitectura orientada a servicios para administrar una
 
 1. [Descripción de la API](#1-descripción-de-la-api)
 2. [Tecnologías utilizadas](#2-tecnologías-utilizadas)
-3. [Instalación y ejecución](#4-instalación-y-ejecución)
-4. [Variables de entorno](#5-variables-de-entorno)
-5. [Listado de endpoints](#7-listado-de-endpoints)
-6. [Ejemplos de peticiones y respuestas](#10-ejemplos-de-peticiones-y-respuestas)
+3. [Instalación y ejecución](#3-instalación-y-ejecución)
+4. [Variables de entorno](#4-variables-de-entorno)
+5. [Listado de endpoints](#5-listado-de-endpoints)
+6. [Ejemplos de peticiones y respuestas](#6-ejemplos-de-peticiones-y-respuestas)
 
 ---
 
