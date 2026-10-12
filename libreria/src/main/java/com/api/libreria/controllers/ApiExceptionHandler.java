@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 
+/**
+ * Manejo centralizado de errores para la API REST (/api/...).
+ * Las vistas HTML manejan sus propios errores con mensajes flash.
+ */
 @RestControllerAdvice(annotations = RestController.class)
 public class ApiExceptionHandler {
 

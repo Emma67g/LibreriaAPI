@@ -65,6 +65,7 @@ public class PrestamoServiceImpl implements PrestamoService {
                     "Este socio ya tiene " + prestamosActivos + " préstamos activos (máximo " + MAX_PRESTAMOS_ACTIVOS + ")");
         }
 
+        // Dos préstamos simultáneos no pueden llevarse el último ejemplar a la vez.
         if (libroRepository.descontarEjemplar(isbn) == 0) {
             throw new IllegalStateException("No hay ejemplares disponibles de \"" + libro.getTitulo() + "\"");
         }

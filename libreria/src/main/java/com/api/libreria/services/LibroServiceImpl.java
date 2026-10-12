@@ -32,7 +32,7 @@ public class LibroServiceImpl implements LibroService {
 
     @Override
     public LibroModel guardarLibro(LibroModel libro) {
-        libro.setIsbn(null);
+        libro.setIsbn(null); // un alta nunca debe sobrescribir un libro existente
         return libroRepository.save(libro);
     }
 

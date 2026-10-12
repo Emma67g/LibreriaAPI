@@ -9,10 +9,16 @@ import com.api.libreria.models.LibroModel;
 
 public interface ILibroRepository extends JpaRepository<LibroModel, Long> {
 
+    /**
+     * Descuenta un ejemplar de forma atómica en la base de datos.
+     * Devuelve 0 si ya no quedaban ejemplares, así dos préstamos simultáneos
+     * nunca pueden llevarse el último ejemplar a la vez.
+     */
     @Modifying
     @Query("UPDATE LibroModel l SET l.numejemplares = l.numejemplares - 1 WHERE l.isbn = :isbn AND l.numejemplares > 0")
     int descontarEjemplar(@Param("isbn") Long isbn);
 
+    /** Repone un ejemplar de forma atómica. */
     @Modifying
     @Query("UPDATE LibroModel l SET l.numejemplares = l.numejemplares + 1 WHERE l.isbn = :isbn")
     int reponerEjemplar(@Param("isbn") Long isbn);

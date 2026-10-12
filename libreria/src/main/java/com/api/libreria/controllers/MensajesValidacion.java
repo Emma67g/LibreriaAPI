@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 
+/** Convierte los errores de validación de un formulario en un solo texto para mostrar en la alerta. */
 final class MensajesValidacion {
 
     private MensajesValidacion() {
